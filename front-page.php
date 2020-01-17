@@ -1,47 +1,23 @@
 
 <?php get_header(); ?>
 
-
-
 <div class="page-banner">
-<div class="page-banner__bg-image" style="background-image: url(<?php echo get_theme_file_uri('/images/header.png') ?>);"></div>
-  <div class="page-banner__content container t-center c-white">
-    <h1 class="headline headline--large">You Can Ride 2</h1>
-    <h2 class="headline headline--medium">Cycling For All</h2>
-    <h3 class="headline headline--small"></h3>
-    <a href="<?php echo site_url('/donate');?>" class="btn btn--large btn--blue">Donate Today</a>
-  </div>
-</div>
-
-<?php // New section addiditon for donation goals ?>
-
-
-<div class="section-progress">  
-    <div class="progress-phrase">
-            <h2>We Need Your Help. 
-            </h2>
-            <p>In 2019, we need to raise a total of $75,000 to make You Can Ride 2 sustainable for next year.
-            Without this funding, we won't be able to pay for necessary equipment required to keep YCR2 running: bikes, repair parts, organizational software, and storage space.
-            </p>
-
-    </div>
-    <?php // the bar itself ?>
-    <div class="progress-container">
-        <div class="progress-bg">
-            <div class="progress-bar">
-            <h3 class="raised">40%</h3>
-            </div>
-
-        <h3 class="goal">Goal: $75,000</h3>
-
-    </div>
-    <div class="padding-button">
-    <p class="t-center no-margin"><a href="<?php echo site_url('/donate');?>" class="btn btn--yellow">Learn More</a></p>
+    <div class="page-banner__bg-image" style="background-image: url(<?php echo get_theme_file_uri('/images/header.png') ?>);"></div>
+      <div class="page-banner__content container t-center c-white">
+        <h1 class="headline headline--large">You Can Ride 2</h1>
+        <h2 class="headline headline--medium">Cycling For All</h2>
+        <h3 class="headline headline--small"></h3>
+        <a href="<?php echo site_url('/donate');?>" class="btn btn--large btn--blue">Donate Today</a>
+      </div>
     </div>
 
+    <?php // New section addidtion for donation goals ?>
+    <?php if ( is_active_sidebar( 'fundraising-area' ) ) : ?>
+        <?php dynamic_sidebar( 'fundraising-area' ); ?>
+    <?php endif; ?>
+    <?php //End progress bar section ?>
+
 </div>
-</div>
-<?php //End progress bar section ?>
 
 <!-- Gallery Section Attempt
 

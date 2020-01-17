@@ -2,7 +2,7 @@
 <html <?php language_attributes()?>>
     <head>
         <meta charset='<?php bloginfo('charset');?>'>
-        <meta name = 'viewport' content = 'width=device-width, initial scale = 1'>
+        <meta name = 'viewport' content = 'width=device-width, initial-scale = 1'>
         <?php wp_head(); ?>
         <meta charset="utf-8">
         <title>YouCanRide2</title>
@@ -10,12 +10,21 @@
     <body <?php body_class();?>>
         <header class="site-header">
           <div class="container">
-            <a href='<?php echo site_url();?>'><img src= '<?php echo get_theme_file_uri('/images/logo.png') ?>);' class="navbar-brand float-left" style=""></a>
+            <a href='<?php echo site_url();?>'><img src= '<?php echo get_theme_file_uri('/images/logo.png') ?>' class="navbar-brand float-left" style=""></a>
           <!-- hiding the search function until developed
             <span class="js-search-trigger site-header__search-trigger"><i class="fa fa-search" aria-hidden="true"></i></span>
           -->
             <i class="site-header__menu-trigger fa fa-bars" aria-hidden="true"></i>
             <div class="site-header__menu group">
+              <nav class="main-navigation">
+                <?php
+                    wp_nav_menu( array( 
+                        'theme_location' => 'main-site-navigation', 
+                    ) ); 
+                ?>
+              </nav>
+
+              <!-- Implemented dynamic navigation
               <nav class="main-navigation">
                 <ul>
                   <li <?php if (is_page('about-us') or wp_get_post_parent_id(0) == 6) echo 'class="nav-item current-menu-item"'?>>
@@ -30,6 +39,8 @@
                   <li <?php if (is_page('contact')) echo 'class="current-menu-item"'?>><a href="<?php echo site_url('/contact');?>">Contact</a></li>
                 </ul>
               </nav>
+              -->
+
               <!-- <div class="site-header__util">
                 <a href="#" class="btn btn--small btn--orange float-left push-right">Login</a>
                 <a href="#" class="btn btn--small  btn--dark-orange float-left">Sign Up</a>
