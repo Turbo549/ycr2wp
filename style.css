@@ -1,9 +1,8 @@
 /*
- Theme Name: YouCanRide2 Custom Theme
- Author: Courtney McNeilly
- Author: the YouCanRide2 team
+ Theme Name: You Can Ride 2 Custom Theme
+ Author: Courtney McNeilly, Brad Mastaler
  Author URI: http://youcanride2.ca
- Version: 1.0
+ Version: 1.1
 */
 
 /* Document
@@ -1859,6 +1858,15 @@ body.login {
 
 .main-navigation li {
   list-style: none;
+}
+
+.main-navigation ul.children {
+	display: none;
+}
+
+.main-navigation ul.children li {
+	float: none;
+
 }
 
 @media (min-width: 960px) {
