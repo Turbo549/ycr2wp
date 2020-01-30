@@ -748,7 +748,7 @@ p, li {
 	background: -o-linear-gradient(top, #1c314a, #27425f);
 }
 
-.progress-bg h3.goal, .progress-bg h3.raised {
+.progress-container h3.goal, .progress-container h3.raised {
 	font-family: 'Roboto',sans-serif;
     font-size: 1rem;
     font-weight: 600;
@@ -756,22 +756,22 @@ p, li {
 	margin: 0;
 	padding: 0;
 	text-align: center;
-	display: inline;
 }
 
 
-.progress-bg h3.raised {
-	color: #fff;
-	margin: 7px 25px 0 30px;
-	padding: 0 25px 0 0;
+.progress-container h3.raised {
+    color: #fff;
+    margin: 10px;
+    display: inline;
 }
 
-.progress-bg h3.goal {
-	color: #1c314a;
-  text-align: center;
+.progress-container h3.goal {
+    color: #1c314a;
+    padding: 0 25px 0 0;
+    text-align: center;
 }
 
-body .progress-bg h3.raised {
+body .progress-container h3.raised {
     -webkit-animation: fadein 4s; /* Safari and Chrome */
        -moz-animation: fadein 4s; /* Firefox */
         -ms-animation: fadein 4s; /* Internet Explorer */
@@ -796,23 +796,10 @@ body .progress-bg h3.raised {
     to   { opacity: 1; }
 }
 
-/* Internet Explorer */
-@-ms-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}​
-
-/* Opera 
+/* Opera  */
 @-o-keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }
-} TODO possibly uncomment this out*/
-
-.progress-bg h3.goal {
-	/* float: right;  possibly uncomment this out*/
-	display: inline;
-	padding: 0 25px 0 0;
-  text-align: center;
 }
 
 body .progress-bg div {
@@ -822,51 +809,24 @@ body .progress-bg div {
 	animation: progress-bar 2s ease forwards;
 }
 
-@-webkit-keyframes progress-bar {
-    from { width: 0%; }
-    to { width: 50%; }
-}
-
-@-moz-keyframes progress-bar {
-    from { width: 0%; }
-    to { width: 50%; }
-}
-
-@-o-keyframes progress-bar {
-    from { width: 0%; }
-    to { width: 50%; }
-}
-
-@keyframes progress-bar {
-    from { width: 0%; }
-    to { width: 40%; }
-}
-
-
 
 @media (min-width: 621px) {
-    .progress-bg h3.goal {
-        font-size: 2em;
-    }
-    .progress-bg h3.raised {
+    .progress-container h3.goal,
+    .progress-container h3.raised {
         font-size: 2em;
     }
 }
 
 @media (max-width: 620px) {
-    .progress-bg h3.goal {
-        font-size: 1.25em;
-    }
-    .progress-bg h3.raised {
+    .progress-container h3.goal,
+    .progress-container h3.raised {
         font-size: 1.25em;
     }
 }
 
 @media (max-width: 400px) {
-    .progress-bg h3.goal {
-        font-size: 1em;
-    }
-    .progress-bg h3.raised {
+    .progress-container h3.goal,
+    .progress-container h3.raised {
         font-size: 1em;
     }
 }
@@ -1583,10 +1543,10 @@ body.login {
 }
 
 .navbar-brand {
-  width: 70px;
+  width: 50px;
 }
 
-@media (min-width: 530px) {
+@media (min-width: 960px) {
   .navbar-brand {
     width: 100px;
   }
@@ -1596,10 +1556,16 @@ body.login {
 .site-header {
   z-index: 3;
   position: absolute;
+  padding: 10px 0;
   top: 0;
   left: 0;
   right: 0;
-  padding: 40px 0;
+}
+
+@media (min-width: 960px) {
+    .site-header {
+        padding: 40px 0;
+    }
 }
 
 .site-header__avatar {
@@ -1618,12 +1584,12 @@ body.login {
 .site-header__menu {
   visibility: hidden;
   position: absolute;
-  background-color: rgba(20, 207, 249, 0.89);
+  background-color: rgba(20, 207, 249);
   left: 0;
   right: 0;
   top: -40px;
   padding-top: 70px;
-  opacity: .5;
+  opacity: .;
   -webkit-transform: translateY(-20%);
           transform: translateY(-20%);
   transition: opacity .3s ease-out, visibility .3s ease-out, -webkit-transform .3s ease-out;
@@ -1680,21 +1646,22 @@ body.login {
 }
 
 .site-header__menu-trigger {
-  color: #FFF;
-  cursor: pointer;
-  font-size: 1.2rem;
-  position: absolute;
-  z-index: 10;
-  top: 7px;
-  right: 46px;
+    color: #FFF;
+    cursor: pointer;
+    font-size: 1.2rem;
+    position: absolute;
+    z-index: 10;
+    right: 20px;
+    top: 7px;
 }
 
-@media (min-width: 530px) {
+@media (min-width: 960px) {
 
-  .site-header__menu-trigger {
-    top: 5px;
-    font-size: 1.4rem;
-  }
+    .site-header__menu-trigger {
+        top: 5px;
+        right: 46px;
+        font-size: 1.4rem;
+    }
 }
 
 @media (min-width: 960px) {
@@ -1894,25 +1861,25 @@ body.login {
   }
 }
 
-.main-navigation .current-menu-item a,
+.main-navigation .current_page_item a,
 .main-navigation a:hover {
-  color: #4bf6f1;
+    color: #4bf6f1;
 }
 
 .page-banner {
   background-color: rgb(100, 100, 100);
-  padding: 90px 0 40px 0;
+  padding: 20 0 20px 0;
   position: relative;
 }
 
-.page-banner {
+/*.page-banner {
   padding: 130px 0 60px 20px;
-}
+}*/
 
-@media (min-width: 530px) {
+@media (min-width: 960px) {
 
   .page-banner {
-    padding: 150px 0 150px 0;
+    padding: 80px 0 40px 0;
   }
 }
 
@@ -1924,13 +1891,13 @@ body.login {
 .page-banner__title {
   font-family: 'Roboto Condensed', sans-serif;
   font-weight: 200;
-  font-size: 3.6rem;
-  margin: 0 0 1rem 0;
+  font-size: 2.5rem;
+  margin: 0.5rem 0;
   color: #FFF;
   text-align: center;
 }
 
-@media (min-width: 530px) {
+@media (min-width: 960px) {
 
   .page-banner__title {
     font-size: 5rem;
@@ -2274,16 +2241,17 @@ body.admin-bar .search-overlay {
 }
 
 .headline--large {
-  font-size: 3.1rem;
+  font-size: 3rem;
   font-family: 'Open Sans', sans-serif;
   font-weight: bold;
   text-align: center;
+  margin-top: 3.5rem;
 }
 
-@media (min-width: 530px) {
+@media (min-width: 960px) {
 
   .headline--large {
-    font-size: 6.25rem;
+    font-size: 6rem;
   }
 }
 
@@ -2293,12 +2261,12 @@ body.admin-bar .search-overlay {
 }
 
 .headline--medium {
-  font-size: 2.2rem;
+  font-size: 2rem;
   margin-bottom: .75rem;
   text-transform: uppercase;
 }
 
-@media (min-width: 530px) {
+@media (min-width: 960px) {
 
   .headline--medium {
     font-size: 2.125rem;
@@ -2492,10 +2460,11 @@ body.admin-bar .search-overlay {
 }
 
 .full-width-split__one {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  padding: 1.6rem 16px;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    padding: 1.6rem 16px;
+    background-color: #ffffff;
 }
 
 @media (min-width: 960px) {
