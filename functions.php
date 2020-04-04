@@ -72,29 +72,6 @@ function load_fundraising_widget() {
     register_widget('fundraising_widget');
 }
 add_action('widgets_init', 'load_fundraising_widget');
-/*
-class fundraising_widget extends WP_Widget {
-    function __construct() {
-        parent::__construct(
-            'fundraising_widget',
-            __('Fundraising Widget'),
-            array(
-                'description' => __('Displays progress bar depicting achievement of our fundraising goal.')     
-			)
-        );
-	}
-
-    public function widget( $args, $instance ) {
-    }
-
-    public function form ($instance) {
-    
-	}
-
-    public function update ($new_instance, $old_instance) {
-        return array();
-	}
-}*/
 
 //The fundraising widget class
 class fundraising_widget extends WP_Widget {
