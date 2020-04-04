@@ -1,5 +1,7 @@
+<!-- BEGIN front-page.php -->
 
 <?php get_header(); ?>
+
 
 <div class="page-banner">
     <div class="page-banner__bg-image" style="background-image: url(<?php echo get_theme_file_uri('/images/header.png') ?>);"></div>
@@ -7,7 +9,7 @@
         <h1 class="headline headline--large">You Can Ride 2</h1>
         <h2 class="headline headline--medium">Cycling For All</h2>
         <h3 class="headline headline--small"></h3>
-        <a href="<?php echo site_url('/donate');?>" class="btn btn--large btn--blue">Donate Today</a>
+        <!-- <a href="<?php echo site_url('/donate');?>" class="btn btn--large btn--blue">Donate Today</a> -->
       </div>
     </div>
 
@@ -46,7 +48,7 @@
     </div>
   </div>
 </section> 
-                            -->
+-->
 
 
 
@@ -170,7 +172,7 @@
 </div>
 </div>
 
-
 <?php
 get_footer();
 ?>
+<!-- END front-page.php -->

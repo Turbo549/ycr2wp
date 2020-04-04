@@ -1,3 +1,4 @@
+<!-- BEGIN header.php -->
 <!DOCTYPE html>
 <html <?php language_attributes()?>>
     <head>
@@ -5,7 +6,7 @@
         <meta name = 'viewport' content = 'width=device-width, initial-scale = 1'>
         <?php wp_head(); ?>
         <meta charset="utf-8">
-        <title>YouCanRide2</title>
+        <title>You Can Ride 2</title>
     </head>
     <body <?php body_class();?>>
         <header class="site-header">
@@ -49,3 +50,4 @@
             </div>
           </div>
         </header>
+<!-- END header.php -->
