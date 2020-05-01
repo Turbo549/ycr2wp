@@ -12,6 +12,7 @@ get_header();
        </div>
      </div>
 
+    <!-- <div class="div"> Due to COVID-19, we are....etc. test.</div> -->
 
      <div class="container container--narrow page-section">
      <?php 
