@@ -50,12 +50,25 @@
 </section> 
 -->
 
-
+<div class="covid--container">
+  <h2 class="covid-title">
+  COVID-19 Update
+  </h2>
+  <p class="covid-message covid">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+  Nulla non dui libero. Aliquam consectetur bibendum ipsum quis fermentum. 
+  Nulla non aliquet dolor. Nam et augue quis dui tempor bibendum a ut orci. 
+  Quisque nec eleifend nunc. Quisque nunc orci, molestie condimentum lorem id, 
+  ultricies placerat orci. Phasellus sed arcu nec ante faucibus iaculis. 
+  Ut ut leo et elit molestie scelerisque vehicula et urna. 
+  </p>
+  <p class="t-center no-margin"><a href="<?php echo site_url('/about-us/covid-19-update/');?>" class="btn btn--yellow">Read Full Details</a></p>
+</div>
 
 <div class="full-width-split group">
   <div class="full-width-split__one">
     <div class="full-width-split__inner">
-      <h2 class="headline headline--small-plus t-center">Upcoming Events</h2>
+      <h2 class="headline headline--small-plus t-center">Upcoming Events</h2>  
 
       <?php
         $today = date('Ymd');
@@ -78,8 +91,8 @@
         while($homepageEvents->have_posts()) {
           $homepageEvents->the_post(); ?>
           <div class="event-summary">
-          <a class="event-summary__date t-center" href="<?php the_permalink(); ?>">
-          <span class="event-summary__month"><?php 
+            <a class="event-summary__date t-center" href="<?php the_permalink(); ?>">
+            <span class="event-summary__month"><?php 
             $eventDate = new DateTime(get_post_field('event_date'));
             echo $eventDate->format('M')
           ?></span>
@@ -100,7 +113,6 @@
         <?php }
 
       ?>
-
 
       <p class="t-center no-margin"><a href="<?php echo get_post_type_archive_link('event'); ?>" class="btn btn--blue">View All Events</a></p>
 
