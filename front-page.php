@@ -3,7 +3,7 @@
 <?php get_header(); ?>
 
 
-<div class="page-banner">
+<div class="page-banner hero">
     <div class="page-banner__bg-image" style="background-image: url(<?php echo get_theme_file_uri('/images/header.png') ?>);"></div>
       <div class="page-banner__content container t-center c-white">
         <h1 class="headline headline--large">You Can Ride 2</h1>
