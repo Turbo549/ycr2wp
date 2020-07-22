@@ -55,12 +55,7 @@
   COVID-19 Update
   </h2>
   <p class="covid-message covid">
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-  Nulla non dui libero. Aliquam consectetur bibendum ipsum quis fermentum. 
-  Nulla non aliquet dolor. Nam et augue quis dui tempor bibendum a ut orci. 
-  Quisque nec eleifend nunc. Quisque nunc orci, molestie condimentum lorem id, 
-  ultricies placerat orci. Phasellus sed arcu nec ante faucibus iaculis. 
-  Ut ut leo et elit molestie scelerisque vehicula et urna. 
+  You Can Ride 2 is committed to keeping all of our participants, families, and volunteers safe during the COVID-19 pandemic.
   </p>
   <p class="t-center no-margin"><a href="<?php echo site_url('/about-us/covid-19-update/');?>" class="btn btn--yellow">Read Full Details</a></p>
 </div>
